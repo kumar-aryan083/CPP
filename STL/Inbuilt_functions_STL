@@ -1,0 +1,50 @@
+All the Inbuilt Functions mentioned below are available in C++ STL and have Time Complexity of O(n) in case of Array and Vector.
+    find() and count() have a Time Complexity of O(logn) in case of Maps and Sets but O(n) in case of Array and Vector.
+----------------------------------------------------------------------------------------------------------------------------------
+1.int min = *min_element(v.begin(),v.end());
+    cout<<min<<endl;
+----------------------------------------------------
+2.int max = *max_element(v.begin(),v.end());
+    cout<<max<<endl;
+----------------------------------------------------
+3.int sum = accumulate(v.begin(),v.end(),0);
+    cout<<sum<<endl;
+----------------------------------------------------
+4.int ct = count(v.begin(),v.end(),6);
+    cout<<ct<<endl;
+----------------------------------------------------
+5.auto it = find(v.begin(),v.end(),10);
+    if(it != v.end()){
+        cout<< *it <<endl;
+    }else{
+        else{
+            cout<<"Element not found."<<endl;
+        }
+    }
+----------------------------------------------------
+6.reverse(v.begin(),v.end());
+    for(int i=0; i<n; i++){
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
+  string s = "asdnvsdjansd";
+  reverse(s.begin(),s.end());
+    cout<<s<<endl;
+----------------------------------------------------
+7. Lambda Functions
+        cout<< [](int x,int y){ return x+y }(4,7) <<endl;
+        auto sum = [](int x, int y){ return x+y };
+            cout<<sum(5,8)<<endl;
+-----------------------------------------------------------------
+8.cout<< all_of( v.begin(),v.end(),[](int x){ return x>0; } );
+-----------------------------------------------------------------
+9.cout<< any_of( v.begin(),v.end(),[](int x){ return x>0; } );
+-----------------------------------------------------------------
+10.cout<< none_of( v.begin(),v.end(),[](int x){ return x>0; } ); 
+-----------------------------------------------------------------
+11.next_permutation() 
+	it is used to get the next lexicographically greater permutation.
+ 	next_permutation(vector.begin(),vector.end());
+------------------------------------------------------------------
+12. isalnum(s[i])
+	it is used to check whether the character in the string is alphanumeric or not
