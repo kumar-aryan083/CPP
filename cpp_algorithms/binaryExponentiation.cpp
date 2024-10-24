@@ -5,7 +5,6 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-#define int long long
 const int Mod = 1e+7;
 
 // Recursive
@@ -20,19 +19,22 @@ int binExpRecur(int a, int b){
 }
 // Iterative
 int binExpIter(int a, int b){
-    int c = 1;
+    int ans = 1;
     while(b>0){
-        if(b&1){
-            c = (c*a)%Mod;
+        if(b%2 == 1){
+            ans = (ans*a)%Mod;
+            b-=1;
+        }else{
+            a = (a*a)%Mod;
+            b/=2;
         }
-        b>>=1;
-        a=(a*a)%Mod;
     }
-    return c;
+    return ans;
 }
 
 int main(){
     int a = 2, b = 13;
     cout<<binExpRecur(a,b)<<endl;
     cout<<binExpIter(a,b)<<endl;
+    return 0;
 }
